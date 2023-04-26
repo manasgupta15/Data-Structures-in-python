@@ -1,0 +1,25 @@
+def binarysearch(array,x,low,high):
+    
+    while(low<=high):
+        mid=low+(high-low)//2
+        
+        if array[mid]==x:
+            return mid
+        elif x>array[mid]:
+            return binarysearch(array,x,mid+1,high)
+        elif x<array[mid]:
+            return binarysearch(array,x,low,mid-1)
+    
+    return -1
+
+
+array=[1,2,3,4,5,6]
+low=0
+high=len(array)-1
+x=2
+result = binarysearch(array,x,low,high)
+if(result!=-1):
+    print("Given element is found at the index: ",result)
+else:
+    print("Given element is not found in the array")
+    
