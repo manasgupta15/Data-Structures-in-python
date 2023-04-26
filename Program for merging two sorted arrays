@@ -1,0 +1,35 @@
+import array as arr
+
+# creating first array...
+array1 = []
+size1=int(input("Enter the size of array: "))
+for i in range(size1):
+    user_input1 = int(input("Enter the element of array 1:"))
+    array1.append(user_input1)
+
+print(array1)
+
+# creating second array
+array2 = []
+size2=int(input("Enter the size of array 2: "))
+for i in range(size2):
+    user_input2 = int(input("Enter the element of array 2:"))
+    array2.append(user_input2)
+
+print(array2)
+
+# merging of two arrays
+
+array3=array1+array2
+print("The merging of two arrays is: ",end=" ")
+for i in array3:
+    print(i,end=" ")
+print()
+
+# sorting of array3
+
+array3.sort()
+print("The sorted merging array is: ",end=" ")
+for i in array3:
+    print(i,end=" ")
+print()
