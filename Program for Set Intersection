@@ -1,0 +1,4 @@
+set1={"banana","Apple"}
+set2 = {"Apple","pineapple"}
+set3=set1.intersection(set2)
+print(set3)
