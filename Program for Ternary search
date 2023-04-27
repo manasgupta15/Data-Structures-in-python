@@ -1,0 +1,33 @@
+import math as mt
+
+def ternary(array,low,high,key):
+    if(low<=high):
+        mid1=low+(high-low)//3
+        mid2=high-(high-low)//3
+        
+        
+        if(array[mid1]==key):
+            return mid1
+        if(array[mid2]==key):
+            return mid2
+        if(key<array[mid1]):
+            return ternary(array,low,mid1-1,key)
+        if(key>array[mid2]):
+            return ternary(array,mid2+1,high,key)
+        else:
+            return ternary(array,mid1+1,mid2-1,key)
+    return -1
+
+
+
+array = [1,2,3,4,5,6,7,8,9,10]
+key=2
+low=0
+high=len(array)-1
+
+result=ternary(array,low,high,key)
+
+if(result!=-1):
+    print("Element is found at the index : ",result,end=" ")
+else:
+    print("Element is not found in the array",end=" ")
